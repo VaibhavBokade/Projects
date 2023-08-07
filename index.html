@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                 
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Full stack Developer</p>
+                    <h1>Hi, I'm <span>Vaibhav Bokade</span><br> from CDAC Acts Pune</h1>
+                </div>
+            </div>
+            
+        </div>
+        <!------------About------>
+        <div id="about">
+           <div class="container">
+               <div class="row">
+                  <div class="about-col-1">
+                    <img src="user.png">
+                  </div>
+                  <div class="about-col-2">
+                    <h4 class="sub-title">About Me</h4>
+                    <p>My name is Vaibhav Bokade, and I recently completed my PG-Diploma course in Advanced Computing from CDAC ACTS Pune.
+
+                        I believe that my skills and education in advanced computing make me a strong candidate for Devloper position. I have a passion for programming and a solid understanding of various programming languages and technologies. Throughout my course, I gained hands-on experience in software development, problem-solving, and collaborating with teams.
+                        
+                         I am confident in my ability to adapt quickly, work efficiently, and contribute to the success of your projects.</p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Edcuation</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>Backend using Java</li>
+                                <li>Frontend using Html,CSS <br>and Javascript</li>
+                                <li>Frontend using React</li>
+                                <li>C# and .Net</li>
+                                <li>Database using SQL <br> and Oracle</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022-Current</span><br>CDAC Training at Cdac Acts Pune</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022-2023</span><br>PG-DAC Course in CDAC Pune.</li>
+                                <li><span>2016-2020</span><br>Batchelor of Engineering</span></li>
+                            </ul>
+                         </div>
+                  </div>
+               </div>
+           </div>
+        </div>
+<!-------------Portfilio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h3>Social Media app</h3>
+                    <p>The app connects you to the talented people around the world. Download it from play store.</p>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work-2.png">
+            </div>
+            <div class="work">
+                <img src="work-3.png">
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+    </body>
+</html>
